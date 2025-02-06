@@ -1,13 +1,20 @@
-# RAG
-Retrieval-Augmented Generation (RAG) System📌 OverviewThis project is an implementation of a Retrieval-Augmented Generation (RAG) system using Python, FastAPI, LangChain, FAISS, and Ollama. The system enables users to search document-based information and integrate it with an LLM model to generate more contextual answers.
-🛠️ Tech StackPython 3.7+
-FastAPI (Backend API)
-LangChain (Framework for RAG)
-FAISS (Vector Store for fast retrieval)
-Ollama (LLM for answering queries)
-Docker (For containerization)
-⚙️ Installation1️⃣ Clone Repositorygit clone https://github.com/your-repo/rag-project.git
-cd rag-project2️⃣ Install DependenciesUse a virtual environment:
+# Retrieval-Augmented Generation (RAG) System
+# Overview
+This project is an implementation of a Retrieval-Augmented Generation (RAG) system using Python, FastAPI, LangChain, FAISS, and Ollama. The system enables users to search document-based information and integrate it with an LLM model to generate more contextual answers.
+# Technology Stack Requirements
+- Python 
+- FastAPI 
+- LangChain 
+- FAISS 
+- Ollama 
+- Docker 
+# Installation
+## 1️⃣ Clone Repository
+git clone https://github.com/your-repo/rag-project.git
+
+cd rag-project
+## 2️⃣ Install Dependencies
+Use a virtual environment:
 python -m venv venv
 source venv/bin/activate  # For Mac/Linux
 venv\Scripts\activate  # For WindowsThen install dependencies:
