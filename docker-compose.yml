@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+
+  rag-api:
+    build:
+      context: .
+      dockerfile: docker.dockerfile
+    container_name: rag_service
+    ports:
+      - "8000:8000"
+    depends_on:
+      - ollama
+      - vector-db
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - VECTOR_DB_HOST=http://vector-db:8000
+    volumes:
+      - ./data:/app/data
+    restart: always
+
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama_service
+    ports:
+      - "11434:11434"
+    volumes:
+      - ./ollama_data:/root/.ollama
+    restart: always
+
+
+  vector-db:
+    image: chromadb/chroma:latest
+    container_name: vector_store
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./vector_data:/app/vector_data
+    restart: always
